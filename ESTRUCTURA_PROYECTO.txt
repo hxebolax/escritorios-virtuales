@@ -1,0 +1,217 @@
+================================================================================
+                    ESTRUCTURA DEL PROYECTO
+                    escritorios-virtuales v1.0.0
+================================================================================
+
+escritorios-virtuales/
+│
+├── 📚 DOCUMENTACIÓN (7 archivos)
+│   ├── LEEME_PRIMERO.txt          ← Comienza aquí (texto plano)
+│   ├── EMPEZAR_AQUI.md            ← Inicio rápido (5 minutos)
+│   ├── README.md                  ← Documentación principal
+│   ├── INICIO_RAPIDO.md           ← Guía de uso rápido
+│   ├── INSTALACION_LOCAL.md       ← Instalación local
+│   ├── DESARROLLO.md              ← Guía de desarrollo
+│   ├── RESUMEN_PROYECTO.md        ← Visión técnica
+│   └── INDICE_DOCUMENTACION.md    ← Índice completo
+│
+├── 💻 CÓDIGO FUENTE
+│   └── escritorios_virtuales/
+│       ├── __init__.py            ← API pública (exporta clases)
+│       ├── com.py                 ← Capa COM con ctypes (~600 líneas)
+│       └── nucleo.py              ← Lógica de negocio (~400 líneas)
+│
+├── 💡 EJEMPLOS (4 scripts + README)
+│   └── ejemplos/
+│       ├── README.md              ← Guía de ejemplos
+│       ├── 01_listar_escritorios.py      (~100 líneas)
+│       ├── 02_crear_y_cambiar.py         (~150 líneas)
+│       ├── 03_gestionar_ventanas.py      (~200 líneas)
+│       └── 04_escenarios_practicos.py    (~300 líneas)
+│
+├── 🧪 TESTS
+│   └── tests/                     ← Directorio para tests (vacío)
+│
+├── 🔧 HERRAMIENTAS
+│   └── prueba_rapida.py           ← Script de verificación (~200 líneas)
+│
+└── ⚙️ CONFIGURACIÓN
+    ├── pyproject.toml             ← Configuración del paquete
+    ├── LICENSE                    ← Licencia MIT
+    ├── MANIFEST.in                ← Archivos de distribución
+    └── .gitignore                 ← Archivos a ignorar en git
+
+================================================================================
+                            ESTADÍSTICAS
+================================================================================
+
+Archivos de código:        3 archivos Python
+Ejemplos:                  4 scripts completos
+Documentación:             8 archivos (7 .md + 1 .txt)
+Líneas de código:          ~1500+ líneas
+Clases principales:        3 (EscritorioVirtual, VistaAplicacion, GestorEscritorios)
+Funciones de ejemplo:      ~20 funciones
+Dependencias:              0 (solo ctypes incluido en Python)
+
+================================================================================
+                            ARCHIVOS CLAVE
+================================================================================
+
+PARA USUARIOS:
+  LEEME_PRIMERO.txt        - Orientación inicial
+  EMPEZAR_AQUI.md          - Inicio rápido
+  README.md                - Documentación completa
+  ejemplos/                - Ejemplos de código
+
+PARA DESARROLLADORES:
+  INSTALACION_LOCAL.md     - Instalación local
+  DESARROLLO.md            - Guía de desarrollo
+  escritorios_virtuales/   - Código fuente
+
+PARA PUBLICACIÓN:
+  pyproject.toml           - Configuración del paquete
+  LICENSE                  - Licencia MIT
+  MANIFEST.in              - Archivos a incluir
+
+HERRAMIENTAS:
+  prueba_rapida.py         - Verificación rápida
+
+================================================================================
+                            FLUJO DE TRABAJO
+================================================================================
+
+1. INSTALACIÓN LOCAL:
+   cd escritorios-virtuales
+   pip install -e .
+
+2. VERIFICACIÓN:
+   python prueba_rapida.py
+
+3. PROBAR EJEMPLOS:
+   cd ejemplos
+   python 01_listar_escritorios.py
+
+4. DESARROLLO:
+   - Editar archivos en escritorios_virtuales/
+   - Cambios se aplican automáticamente
+   - Ejecutar prueba_rapida.py para verificar
+
+5. PUBLICACIÓN:
+   python -m build
+   twine upload dist/*
+
+================================================================================
+                            COMPONENTES TÉCNICOS
+================================================================================
+
+com.py (Capa COM - Bajo Nivel):
+  - Estructuras COM (GUID, IUnknown, etc.)
+  - Interfaces de Windows
+  - Gestión de versiones
+  - ~600 líneas
+
+nucleo.py (Lógica de Negocio - Alto Nivel):
+  - Clase EscritorioVirtual
+  - Clase VistaAplicacion
+  - Clase GestorEscritorios
+  - Excepciones personalizadas
+  - ~400 líneas
+
+__init__.py (API Pública):
+  - Exporta clases principales
+  - Documentación de módulo
+  - ~50 líneas
+
+================================================================================
+                            API PRINCIPAL
+================================================================================
+
+EscritorioVirtual:
+  - actual()                    # Obtener escritorio actual
+  - crear()                     # Crear nuevo escritorio
+  - obtener_todos()             # Listar todos
+  - ir()                        # Cambiar a este escritorio
+  - eliminar()                  # Eliminar escritorio
+  - obtener_ventanas()          # Ventanas en este escritorio
+
+VistaAplicacion:
+  - actual()                    # Obtener ventana actual
+  - mover_a_escritorio()        # Mover a otro escritorio
+  - anclar()                    # Anclar (mostrar en todos)
+  - desanclar()                 # Desanclar
+  - esta_anclada()              # Verificar si está anclada
+  - enfocar()                   # Enfocar ventana
+
+GestorEscritorios:
+  - obtener_escritorios()       # Listar escritorios
+  - obtener_escritorio_actual() # Escritorio actual
+  - crear_escritorio()          # Crear nuevo
+  - obtener_ventanas()          # Listar ventanas
+  - obtener_ventana_actual()    # Ventana actual
+
+================================================================================
+                            EJEMPLOS INCLUIDOS
+================================================================================
+
+01_listar_escritorios.py:
+  ✓ Listar todos los escritorios
+  ✓ Obtener escritorio actual
+  ✓ Mostrar información detallada
+  ✓ Listar ventanas por escritorio
+
+02_crear_y_cambiar.py:
+  ✓ Crear nuevos escritorios
+  ✓ Cambiar entre escritorios
+  ✓ Eliminar escritorios
+  ✓ Navegación automática
+
+03_gestionar_ventanas.py:
+  ✓ Listar ventanas
+  ✓ Mover ventanas entre escritorios
+  ✓ Anclar/desanclar ventanas
+  ✓ Enfocar ventanas específicas
+
+04_escenarios_practicos.py:
+  ✓ Limpiar escritorios vacíos
+  ✓ Crear espacios de trabajo
+  ✓ Organizar ventanas por tipo
+  ✓ Flujo de trabajo completo
+
+================================================================================
+                            REQUISITOS
+================================================================================
+
+Sistema Operativo:  Windows 10 (build 10240+) o Windows 11
+Python:             3.7 o superior
+Dependencias:       Ninguna (solo ctypes incluido en Python)
+Permisos:           Usuario normal (no requiere administrador)
+
+================================================================================
+                            LICENCIA
+================================================================================
+
+MIT License - Libre para uso comercial y personal
+
+Copyright (c) 2025 XeBoLaX
+
+Ver archivo LICENSE para términos completos.
+
+================================================================================
+                            PRÓXIMOS PASOS
+================================================================================
+
+1. Lee LEEME_PRIMERO.txt o EMPEZAR_AQUI.md
+2. Instala: pip install -e .
+3. Verifica: python prueba_rapida.py
+4. Prueba ejemplos en ejemplos/
+5. Lee README.md para documentación completa
+
+================================================================================
+
+Proyecto creado: 2025
+Versión: 1.0.0
+Idioma: Español
+Autor: XeBoLaX
+GitHub: https://github.com/hxebolax/escritorios-virtuales
+
+================================================================================

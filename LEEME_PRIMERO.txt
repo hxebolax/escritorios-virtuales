@@ -1,0 +1,91 @@
+================================================================================
+                    ESCRITORIOS VIRTUALES - LEEME PRIMERO
+================================================================================
+
+¡Bienvenido a escritorios-virtuales!
+
+Esta es una librería Python completamente en español para gestionar 
+escritorios virtuales de Windows 10/11.
+
+================================================================================
+                            INICIO RÁPIDO
+================================================================================
+
+1. INSTALAR:
+   
+   pip install -e .
+
+2. VERIFICAR:
+   
+   python prueba_rapida.py
+
+3. PROBAR EJEMPLO:
+   
+   cd ejemplos
+   python 01_listar_escritorios.py
+
+================================================================================
+                            DOCUMENTACIÓN
+================================================================================
+
+Lee estos archivos en orden:
+
+1. EMPEZAR_AQUI.md          - Inicio rápido (5 minutos)
+2. README.md                - Documentación completa
+3. INICIO_RAPIDO.md         - Guía de uso
+4. ejemplos/                - Ejemplos de código
+
+Para desarrollo:
+- INSTALACION_LOCAL.md      - Instalación local
+- DESARROLLO.md             - Guía de desarrollo
+
+Para referencia:
+- INDICE_DOCUMENTACION.md   - Índice completo
+- RESUMEN_PROYECTO.md       - Visión técnica
+
+================================================================================
+                            CARACTERÍSTICAS
+================================================================================
+
+✓ 100% en español
+✓ Sin dependencias externas
+✓ Funcionalidad completa
+✓ 4 ejemplos incluidos
+✓ Fácil de usar
+
+================================================================================
+                            USO BÁSICO
+================================================================================
+
+from escritorios_virtuales import EscritorioVirtual
+
+# Listar escritorios
+escritorios = EscritorioVirtual.obtener_todos()
+
+# Crear nuevo
+nuevo = EscritorioVirtual.crear()
+nuevo.ir()
+
+================================================================================
+                            SOPORTE
+================================================================================
+
+- Documentación: Ver archivos .md
+- Ejemplos: Directorio ejemplos/
+- Problemas: python prueba_rapida.py
+- GitHub: https://github.com/hxebolax/escritorios-virtuales
+
+================================================================================
+                            LICENCIA
+================================================================================
+
+MIT License - Libre para uso comercial y personal
+Ver archivo LICENSE para más detalles
+
+================================================================================
+
+¡Disfruta usando escritorios-virtuales! 🎉
+
+Para empezar, abre: EMPEZAR_AQUI.md
+
+================================================================================
