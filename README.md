@@ -14,12 +14,6 @@ Una librería Python ligera y sin dependencias para gestionar escritorios virtua
   - Anclar/desanclar ventanas (mostrar en todos los escritorios)
   - Obtener información de ventanas y escritorios
 
-## 📦 Instalación
-
-```bash
-pip install escritorios-virtuales
-```
-
 ## 🚀 Inicio Rápido
 
 ```python
